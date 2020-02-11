@@ -144,7 +144,7 @@
                 return { left: left, top: top };
             };
             var prompt = function (success, msg) {
-                layer.prompt({ title: '输入标注', formType: 2, width: $this.Options.inputwidth, height: $this.Options.inputheight, value: msg }, function (text, index) {
+                layer.prompt({ title: 'Input tag', formType: 2, width: $this.Options.inputwidth, height: $this.Options.inputheight, value: msg }, function (text, index) {
                     layer.close(index);
                     if (text.length > 0) {
                         if (success && typeof success === "function") {
@@ -242,9 +242,9 @@
                         WebuiPopovers.updateContent(sign, signdata.msg);
                     }
                     else {
-                        var updatebtn = $("<a class='btn btn-xs btn-info' style='margin-right:5px'>编辑</a>");
-                        var movebtn = $("<a class='btn btn-xs btn-warning' style='margin-right:5px'>移动</a>");
-                        var delbtn = $("<a class='btn btn-xs btn-danger' style='margin-right:5px'>删除</a>");
+                        var updatebtn = $("<a class='btn btn-xs btn-info' style='margin-right:5px'>Edit</a>");
+                        var movebtn = $("<a class='btn btn-xs btn-warning' style='margin-right:5px'>Move</a>");
+                        var delbtn = $("<a class='btn btn-xs btn-danger' style='margin-right:5px'>Delete</a>");
                         var signbtn = $("<div class='pull-right'></div>"), del = true, update = true, move = true;
                         if ($this.Options.editable !== false) {
                             if ($this.Options.editable !== true) {
@@ -394,7 +394,7 @@
             var $this = this;
             for (var i = 0; i < $this.Data.length; i++) {
                 if ($this.Data[i].signid === signid) {
-                    layer.confirm('是否删除标注？', { icon: 0, title: '删除标注' }, function (index) {
+                    layer.confirm('Delete tags ？', { icon: 0, title: 'Delete tags' }, function (index) {
                         layer.close(index);
                         if ($this.event("beforedel", $this.Data[i], istrigger)) {
                             $this.domdel(signid);

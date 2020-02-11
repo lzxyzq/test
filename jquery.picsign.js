@@ -275,7 +275,7 @@
                             }
                         }
                         sign.webuiPopover($.extend({}, webuiPopoverSetting, {
-                            title: "标注" + signbtn.prop("outerHTML"),
+                            title: "Add tags" + signbtn.prop("outerHTML"),
                             width: $this.Options.popwidth,
                             height: $this.Options.popheight,
                             content: signdata.msg,
